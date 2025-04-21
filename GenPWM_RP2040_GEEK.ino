@@ -86,9 +86,6 @@ void setup() {
   pinMode(TFT_BL, OUTPUT);
   digitalWrite(TFT_BL, HIGH);
 
-  pinMode(PIN3, OUTPUT);
-  digitalWrite(PIN3, HIGH);
-
   // SPI1 pin init
   SPI1.setSCK(TFT_SCLK);
   SPI1.setTX(TFT_MOSI);
@@ -100,6 +97,8 @@ void setup() {
   // Init wyświetlacza
   tft.init(135, 240);
   tft.setRotation(1);  
+  setupFreq();
+  showFreq();
 }
 
 
